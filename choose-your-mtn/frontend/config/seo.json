@@ -1,0 +1,16 @@
+{
+  "siteMetadata": {
+    "title": "Next.js Starter Blog",
+    "author": {
+      "name": "Jose Felix",
+      "summary": "who works building clean user interfaces with React.",
+      "link": "https://jfelix.info"
+    },
+    "description": "A blog created with Next.js and Tailwind.css",
+    "siteUrl": "https://nextjs-starter-blog-new-demo.vercel.app/",
+    "language": "en-US",
+    "social": {
+      "twitter": "Jose_R_Felix"
+    }
+  }
+}
