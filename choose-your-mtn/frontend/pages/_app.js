@@ -3,9 +3,8 @@ import Head from "next/head";
 
 import siteMetadata from "@/content/siteMetadata";
 import LayoutWrapper from "@components/LayoutWrapper";
-// import LayoutWrapper from "@components/LayoutWrapper";
 
-import "@assets/css/main.css";
+import "@assets/css/tailwind.css";
 import "typeface-open-sans";
 import "typeface-merriweather";
 

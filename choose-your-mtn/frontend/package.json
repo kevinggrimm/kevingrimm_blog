@@ -1,25 +1,23 @@
 {
-  "name": "nextjs-blog-starter",
-  "version": "0.3.0",
-  "description": "A Next.js template for a blog website.",
+  "name": "kevingrimm-blog",
+  "version": "0.0.1",
+  "description": "Blogging website built with Next.js and Tailwind",
   "private": true,
-  "engines": {
-    "node": "16"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@svgr/webpack": "^6.1.1",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.0",
     "clsx": "^1.1.1",
     "feed": "^4.2.2",
     "github-slugger": "^1.4.0",
+    "gray-matter": "^4.0.3",
     "next": "12.0.7",
     "next-compose-plugins": "^2.2.1",
     "next-themes": "^0.0.15",
-    "node": "^14.19.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.4.0",
@@ -31,11 +29,10 @@
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.4.1",
+    "@svgr/webpack": "^6.1.1",
     "autoprefixer": "^10.4.0",
-    "gray-matter": "^4.0.3",
     "postcss": "^8.4.4",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^3.0.24"
   },
   "license": "MIT",
   "repository": {

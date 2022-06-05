@@ -4,7 +4,7 @@
         <title>Next.js Starter Blog</title>
         <link>https://nextjs-starter-blog-new-demo.vercel.app/</link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 05 Jun 2022 03:26:19 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Jun 2022 13:39:53 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
@@ -14,7 +14,6 @@
             <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/long-post</link>
             <guid>long-post</guid>
             <pubDate>Tue, 28 Jul 2020 06:00:00 GMT</pubDate>
-            <description><![CDATA[Who doesn't like a long post showcasing the different headings?]]></description>
             <content:encoded><![CDATA[
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
@@ -124,7 +123,6 @@ for their projects again and again.]]></content:encoded>
             <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/coding-post</link>
             <guid>coding-post</guid>
             <pubDate>Sun, 19 Apr 2020 06:00:00 GMT</pubDate>
-            <description><![CDATA[Coding is such a blissful activity.]]></description>
             <content:encoded><![CDATA[
 ```jsx
 import React from "react";
@@ -140,7 +138,6 @@ export default CoolComponent;
             <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/second-post</link>
             <guid>second-post</guid>
             <pubDate>Fri, 17 Apr 2020 06:00:00 GMT</pubDate>
-            <description><![CDATA[The second post is the least memorable.]]></description>
             <content:encoded><![CDATA[
 # h1
 
@@ -156,7 +153,6 @@ Normal text
             <link>https://nextjs-starter-blog-new-demo.vercel.app/posts/first-post</link>
             <guid>first-post</guid>
             <pubDate>Thu, 16 Apr 2020 06:00:00 GMT</pubDate>
-            <description><![CDATA[The first post is the most memorable one.]]></description>
             <content:encoded><![CDATA[
 # h1
 

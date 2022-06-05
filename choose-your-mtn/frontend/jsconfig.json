@@ -6,6 +6,8 @@
       "@utils/*": ["utils/*"],
       "@assets/*": ["assets/*"],
       "@config/*": ["config/*"],
+      "@content/*": ["content/*"],
+      "@lib/*": ["lib/*"],
       "@/*": ["./*"]
     }
   }

@@ -1,10 +1,14 @@
-import matter from "gray-matter";
-import fs from "fs";
+import matter from 'gray-matter';
+import path from 'path';
+import fs from 'fs';
+import { getFiles } from '@/lib/md';
+
+const root = process.cwd()
 
 export function getPostsFolders() {
-  // Get all posts folders located in `content/posts`
+  // Get all posts folders located in `content/blog`
   const postsFolders = fs
-    .readdirSync(`${process.cwd()}/content/posts`)
+    .readdirSync(`${process.cwd()}/content/blog`)
     .map((folderName) => ({
       directory: folderName,
       filename: `${folderName}.md`,
@@ -28,7 +32,7 @@ export function getSortedPosts() {
     .map(({ filename, directory }) => {
       // Get raw content from file
       const markdownWithMetadata = fs
-        .readFileSync(`content/posts/${directory}/${filename}`)
+        .readFileSync(`content/blog/${directory}/${filename}`)
         .toString();
 
       // Parse markdown, get frontmatter data, excerpt and content.
@@ -55,6 +59,21 @@ export function getSortedPosts() {
 
   return posts;
 }
+
+// export async function getFileBySlug(type, slug) {
+//   const mdPath = path.join(root, 'content', type, `${slug}.md`)
+//   const source = fs.readFileSync(mdPath, 'utf8')
+//   const { data: frontmatter } = matter(source)
+
+//   return {
+//     frontmatter: {
+//       slug: slug || null,
+//       fileName: `${slug}.md`,
+//       ...frontmatter,
+//       date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null,
+//     },
+//   }
+// }
 
 export function getPostsSlugs() {
   const postFolders = getPostsFolders();

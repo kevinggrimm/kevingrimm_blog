@@ -4,10 +4,12 @@ import { Feed } from "feed";
 
 import { getSiteMetaData } from "./helpers";
 import { getSortedPosts } from "./posts";
+import { getAllFilesFrontMatter } from "@/lib/md";
 
 export function generateRssPostsFeed() {
   const { title, siteUrl, language, author } = getSiteMetaData();
-  const posts = getSortedPosts();
+  // const posts = getSortedPosts();
+  const posts = getAllFilesFrontMatter('blog')
 
   const feed = new Feed({
     title,
