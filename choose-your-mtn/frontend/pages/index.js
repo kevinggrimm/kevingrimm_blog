@@ -5,6 +5,7 @@ import { getSortedPosts } from "@utils/posts";
 import { generateRssPostsFeed } from "@utils/rss";
 
 export default function Home({ posts }) {
+  console.log(`WORKING DIR: `, process.cwd()) // "/"
   return (
     <div className='my-10'>
       <SEO title="All posts" />
