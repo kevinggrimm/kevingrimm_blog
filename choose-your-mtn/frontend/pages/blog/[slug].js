@@ -44,7 +44,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Blog({ post, authorDetails, prev, next }) {
-  const { frontmatter } = post
+  const { frontmatter, content } = post
   return (
     <>
       {frontmatter.draft !== true ? (
@@ -53,7 +53,18 @@ export default function Blog({ post, authorDetails, prev, next }) {
           authorDetails={authorDetails}
           prev={prev}
           next={next}
-        />
+        >
+          <div className="my-10">
+            <article>
+              <ReactMarkdown
+                className='mb-4 prose lg:prose-lg dark:prose-dark'
+                escapeHtml={false}
+                source={post.content}
+                renderers={{ code: CodeBlock, image: MarkdownImage }}
+              />
+            </article>
+          </div>
+        </PostLayout>
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
@@ -68,51 +79,6 @@ export default function Blog({ post, authorDetails, prev, next }) {
   );
 }
 
-// export default function Post({ post, frontmatter, nextPost, previousPost }) {
-//   return (
-//     <div className='my-10'>
-//       <SEO
-//         title={frontmatter.title}
-//         description={frontmatter.description || post.excerpt}
-//       />
-
-//       <article>
-//         <header className="mb-8">
-//           <h1 className="mb-2 text-6xl font-black leading-none font-display">
-//             {frontmatter.title}
-//           </h1>
-//           <p className="text-sm">{frontmatter.date}</p>
-//         </header>
-//         <ReactMarkdown
-//           className="mb-4 prose lg:prose-lg dark:prose-dark"
-//           escapeHtml={false}
-//           source={post.content}
-//           renderers={{ code: CodeBlock, image: MarkdownImage }}
-//         />
-//         <hr className="mt-4" />
-//       </article>
-
-//       <nav className="flex flex-wrap justify-between mb-10">
-//         {previousPost ? (
-//           <Link href={"/posts/[slug]"} as={`/posts/${previousPost.slug}`}>
-//             <a className="text-lg font-bold">
-//               ← {previousPost.frontmatter.title}
-//             </a>
-//           </Link>
-//         ) : (
-//           <div />
-//         )}
-//         {nextPost ? (
-//           <Link href={"/posts/[slug]"} as={`/posts/${nextPost.slug}`}>
-//             <a className="text-lg font-bold">{nextPost.frontmatter.title} →</a>
-//           </Link>
-//         ) : (
-//           <div />
-//         )}
-//       </nav>
-//     </div>
-//   );
-// }
 
 const CodeBlock = ({ language, value }) => {
   return (

@@ -27,9 +27,10 @@ export function formatSlug(slug) {
 export async function getFileBySlug(type, slug) {
   const mdPath = path.join(root, "content", type, `${slug}.md`);
   const source = fs.readFileSync(mdPath, "utf8");
-  const { data: frontmatter } = matter(source);
+  const { data: frontmatter, content } = matter(source);
 
   return {
+    content,
     frontmatter: {
       slug: slug || null,
       fileName: `${slug}.md`,

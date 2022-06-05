@@ -69,7 +69,7 @@ const resumeData = {
     categories: [
       {
         name: "Languages",
-        items: "Bash, Javascript, Python, SQL",
+        items: "Python, SQL, Javascript, Bash",
       },
       {
         name: "Frameworks",
@@ -77,7 +77,7 @@ const resumeData = {
       },
       {
         name: "Platforms",
-        items: "Airflow, AWS, Docker, Node, Snowflake",
+        items: "AWS, Snowflake, Docker, Airflow, Node",
       },
       {
         name: "Tools",
@@ -155,8 +155,8 @@ const resumeData = {
     location: "Washington, D.C.",
     timePeriod: "Fall 2011 - Spring 2015",
     details: [
-      "BSBA, Accounting and Finance",
-      "Relevant Coursework: Advanced Accounting, Financial Statement Analysis, International Finance, Principles of Investment"
+      "B.S. in Business Administration | Accounting and Finance",
+      "Courses: Advanced Accounting, Financial Statement Analysis, International Finance, Principles of Investment"
     ]
   },
   interests: {

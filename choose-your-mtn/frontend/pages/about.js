@@ -47,7 +47,9 @@ export default function About({ }) {
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
-            {description}
+            {description.map(item => (
+              <div className='my-2'>{item}</div>
+            ))}
           </div>
         </div>
       </div>
