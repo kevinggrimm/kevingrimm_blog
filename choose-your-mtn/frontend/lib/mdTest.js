@@ -1,11 +1,12 @@
-import fs from 'fs'
-import path from 'path';
-import matter from 'gray-matter'
-import getAllFilesRecursively from "./utils/files";
+const fs = require('fs')
+const path = require('path')
+const matter = require('gray-matter')
+const { getAllFilesRecursively } = require("./utils/filesTest")
 
-const root = process.cwd()
+const root =
+  "/Users/kevingrimm_/Desktop/PROJECTS/FORM4/kevingrimm_blog/choose-your-mtn/frontend/";
 
-export function getFiles(type) {
+function getFiles(type) {
   console.log(`ROOT: `, root)
   const prefixPaths = path.join(root, "content", type);
   const files = getAllFilesRecursively(prefixPaths);
@@ -15,18 +16,18 @@ export function getFiles(type) {
   );
 }
 
-export function dateSortDesc(a, b) {
+function dateSortDesc(a, b) {
   if (a > b) return -1
   if (a < b) return 1
   return 0
 }
 
-export function formatSlug(slug) {
+function formatSlug(slug) {
   return slug.replace(/\.(mdx|md)/, '')
 }
 
 
-export async function getAllFilesFrontMatter(folder) {
+async function getAllFilesFrontMatter(folder) {
   const prefixPaths = path.join(root, "content", folder)
   const files = getAllFilesRecursively(prefixPaths)
   const allFrontMatter = []
@@ -51,3 +52,10 @@ export async function getAllFilesFrontMatter(folder) {
 
   return allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date));
 }
+
+module.exports = {
+  getFiles,
+  dateSortDesc,
+  formatSlug,
+  getAllFilesFrontMatter,
+};
