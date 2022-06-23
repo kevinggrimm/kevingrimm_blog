@@ -25,22 +25,24 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
-  const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug)
-  const prev = allPosts[postIndex + 1] || null
-  const next = allPosts[postIndex - 1] || null
-  const post = await getFileBySlug('blog', params.slug)
-  const authorList = post.frontmatter.authors || ['default']
+  const allPosts = await getAllFilesFrontMatter("blog");
+  const postIndex = allPosts.findIndex(
+    (post) => formatSlug(post.slug) === params.slug
+  );
+  const prev = allPosts[postIndex + 1] || null;
+  const next = allPosts[postIndex - 1] || null;
+  const post = await getFileBySlug("blog", params.slug);
+  // TODO - Add avatar abck to default.md for authors: # avatar: /static/images/avatar.png
+  const authorList = post.frontmatter.authors || ["default"];
   const authorPromise = authorList.map(async (author) => {
-    const authorResults = await getFileBySlug('authors', [author])
-    return authorResults.frontmatter
-  })
-  const authorDetails = await Promise.all(authorPromise)
+    const authorResults = await getFileBySlug("authors", [author]);
+    return authorResults.frontmatter;
+  });
+  const authorDetails = await Promise.all(authorPromise);
 
   // rss - TODO
 
-  return { props: { post, authorDetails, prev, next } }
-
+  return { props: { post, authorDetails, prev, next } };
 }
 
 export default function Blog({ post, authorDetails, prev, next }) {

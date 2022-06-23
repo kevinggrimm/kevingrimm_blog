@@ -1,6 +1,6 @@
 const aboutData = {
   name: "Kevin Grimm",
-  image: "/static/images/avatar.png",
+  // image: "/images/avatar.png",
   occupation: "Senior Data Engineer",
   company: "Guidepoint Qsight",
   email: "kevin.g.grimm1@gmail.com",

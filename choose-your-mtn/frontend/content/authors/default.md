@@ -1,6 +1,5 @@
 ---
 name: Kevin Grimm
-avatar: /static/images/avatar.png
 occupation: Senior Data Engineer
 company: Guidepoint Qsight
 email: kevin.g.grimm1@gmail.com

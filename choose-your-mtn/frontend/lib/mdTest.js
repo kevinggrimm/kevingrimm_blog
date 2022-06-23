@@ -7,7 +7,6 @@ const root =
   "/Users/kevingrimm_/Desktop/PROJECTS/FORM4/kevingrimm_blog/choose-your-mtn/frontend/";
 
 function getFiles(type) {
-  console.log(`ROOT: `, root)
   const prefixPaths = path.join(root, "content", type);
   const files = getAllFilesRecursively(prefixPaths);
   // Only want to return blog/path and ignore root, replace is needed to work on Windows

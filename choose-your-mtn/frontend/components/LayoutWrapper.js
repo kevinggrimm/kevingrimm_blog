@@ -9,7 +9,6 @@ import siteMetadata from '@/content/siteMetadata'
 import headerNavLinks from '@/content/headerNavLinks';
 
 const LayoutWrapper = ({ children }) => {
-  console.log('LAYOUT WRAPPER COMPONENT')
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">

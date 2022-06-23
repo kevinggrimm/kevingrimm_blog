@@ -8,7 +8,6 @@ const root = process.cwd();
 
 export async function getAllTags(type) {
   const files = await getFiles(type);
-  console.log(`FILES: `, files)
 
   let tagCount = {};
   // Iterate through each post, putting all found tags into `tags`

@@ -7,3 +7,11 @@
 7. Add tags underneath each post
 8. Change name from `post` to `blog`
 9. Migrate lib/utils to utils + update imports
+10. Blog pages
+11. Newsletter form
+12. GitHub links working
+13. "Discuss on Twitter" links
+
+Notes
+- Removed `engines: { node: 16 }` from package.json
+- Removed `"node": "^14.19.1",` from package.json

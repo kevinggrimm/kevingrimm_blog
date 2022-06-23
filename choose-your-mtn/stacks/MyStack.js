@@ -23,39 +23,36 @@ export default class ChooseYourMountain extends sst.Stack {
         NEXT_PUBLIC_REGION: scope.region,
         NEXT_PUBLIC_TABLE_NAME: table.tableName,
       },
-      customDomain: {
-        cdk: {
-          hostedZone: HostedZone.fromHostedZoneAttributes(
-            this,
-            "ChooseYourMtnZone",
-            {
-              // hostedZoneId: process.env.HOSTED_ZONE_ID,
-              // zoneName: process.env.ZONE_NAME,
-              hostedZoneId: "Z04771733ICFQMWM917HW",
-              zoneName: "chooseyourmountain.com",
-            }
-          ),
-          certificate: Certificate.fromCertificateArn(
-            this,
-            "ChooseYourMountainCert",
-            // process.env.CERTIFICATE_ARN
-            "arn:aws:acm:us-east-1:983976420942:certificate/adf8e676-a9c5-4e36-a315-c3d356338270",
-          ),
-        },
-        domainName:
-          scope.stage === "prod"
-            ? "chooseyourmountain.com"
-            : `${scope.stage}.chooseyourmountain.com`,
-        domainAlias:
-          scope.stage === "prod" ? "www.chooseyourmountain.com" : undefined,
-      },
+      // customDomain: {
+        // domainName: "chooseyourmountain.com",
+        // scope.stage === "prod"
+        //   ? "chooseyourmountain.com"
+        //   : `${scope.stage}.chooseyourmountain.com`,
+        // domainAlias: "www.chooseyourmountain.com",
+        // scope.stage === "prod" ? "www.chooseyourmountain.com" : undefined,
+        // hostedZone: "chooseyourmountain.com",
+        // hostedZone: HostedZone.fromHostedZoneAttributes(this,
+        //   "ChooseYourMtnZone",{
+        //     hostedZoneId: "Z04771733ICFQMWM917HW",
+        //     zoneName: "chooseyourmountain.com",
+        //   }
+        // )
+        // cdk: {
+        //   certificate: Certificate.fromCertificateArn(
+        //     this,
+        //     "ChooseYourMountainCert",
+        //     "arn:aws:acm:us-east-1:983976420942:certificate/adf8e676-a9c5-4e36-a315-c3d356338270",
+        //     "arn:aws:acm:us-east-1:983976420942:certificate/adf8e676-a9c5-4e36-a315-c3d356338270"
+        //   ),
+        // },
+      // },
     });
 
     site.attachPermissions([table]);
 
     this.addOutputs({
       URL: site.url,
-      CustomDomainUrl: site.customDomainUrl,
+      // CustomDomainUrl: site.customDomainUrl,
     });
   }
 }

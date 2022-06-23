@@ -141,14 +141,15 @@ export const BlogSEO = ({
     datePublished: publishedAt,
     dateModified: modifiedAt,
     author: authorList,
-    publisher: {
-      "@type": "Organization",
-      name: siteMetadata.author,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
-      },
-    },
+    // TODO - Reconfigure once logo is prepared
+    // publisher: {
+    //   "@type": "Organization",
+    //   name: siteMetadata.author,
+    //   logo: {
+    //     "@type": "ImageObject",
+    //     url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
+    //   },
+    // },
     description: summary,
   };
 

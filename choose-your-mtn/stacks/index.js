@@ -3,7 +3,7 @@ import ChooseYourMountain from "./MyStack";
 // Need to get functional Stack working
 export default function main(app) {
   app.setDefaultFunctionProps({
-    runtime: "nodejs14.x",
+    // runtime: "nodejs14.x",
     srcPath: "backend",
     // bundle: {
     //   format: "esm",

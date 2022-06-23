@@ -9,7 +9,6 @@ import "typeface-open-sans";
 import "typeface-merriweather";
 
 export default function MyApp({ Component, pageProps }) {
-  console.log('SITE METADATA: ', siteMetadata)
   return (
     <ThemeProvider defaultTheme={siteMetadata.theme} enableSystem={true} attribute="class">
       <Head>

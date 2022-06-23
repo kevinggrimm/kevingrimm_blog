@@ -3,10 +3,10 @@ const resumeData = {
     title: "Summary",
     paragraphs: [
       "I am a fervent believer in investing in your own success.",
-      "That philosophy is what drove my pursuit of Python, SQL, and later AWS despite no official background in computer science. This introduced me to a world in which business insights can be unlocked with a solid foundation of technical skills and dogged perseverance. Engineering is simply solving complex puzzles through creative discovery.",
-      "However, engineering is not performed in a vacuum. It is a collection of processes that require collaboration amongst various stakeholders and a deep understanding of the problems at hand. In other words, communication and trust are crucial. In my current and past roles, I've been able to build a transparent culture within my team, which helps to increase trust, efficiency and alignment on our projects.",
-      "The investment I make in myself does not stop when the workday ends. I am continuously striving to strengthen my education, health and relationships because I know that doing this today will pay dividends tomorrow.",
-      "In the years to come, this site will serve as a point of reference for mountains that I have chosen.",
+      "That philosophy drove my pursuit of Python, SQL, and later AWS despite having a background in finance. I later entered our data-driven world where business insights are unlocked through a solid foundation of technical skills, critical thinking, and dogged perseverance. Now several years into my career, I view data engineering as a complex puzzle that is solved through creative discovery.",
+      "However, engineering is not performed in a vacuum; it's a collection of processes that involve multiple stakeholders and demands a fundamental understanding of the problem at hand. In this type of environment, communication and trust are crucial. Through proactive outreach and genuine conversation, I've cultivated a healthy and transparent culture in my current and past teams.",
+      "The investment I make in myself does not stop when the workday ends. I am continuously striving to strengthen my education, health, and relationships because I know that doing this today will pay dividends tomorrow.",
+      "In the years to come, this site will serve as a point of reference for the mountains thI have chosen.",
     ],
   },
   experience: {
@@ -18,11 +18,12 @@ const resumeData = {
         location: "Remote",
         period: "January 2022 - Present",
         accomplishments: [
-          "Architected a multi-step ETL that executes weekly transfers of 800GB datasets from GCP to AWS (Python / Snowflake / REST APIs).",
-          "Ensure alignment between business requirements, data assets and available technical solution through proactive coordination with team and data partners.",
+          "Exhaustive ETL design for structured and semi-structured datasets of up to 800GB in size sourced from cloud storage, SFTP servers, flat files, and REST APIs.",
+          "Architected a multi-cloud ETL solution that executes weekly batch transfers of 300GB+ datasets from GCP to AWS (Python / Snowflake / REST APIs).",
+          "Proactive engagement with our team and data partners regarding business requirements and data asset characteristics to ensure data integrity.",
+          "Continued investment towards data validation, standardized ETL development, and query optimization to deliver additional data pipelines.",
           "Improved operational reliability and team efficiency by automating IP whitelist rollouts for our Snowflake and AWS infrastructure.",
-          "Continued investment towards data validation, ETL development and query optimization to support additional products and growing team.",
-          "Frequent technical support to internal team and knowledge sharing through ETL documentation and technical presentations on completed projects.",
+          "Frequent technical support to 5+ analysts over reviews of our custom Python framework, documentation, and presentations on completed projects.",
         ],
       },
       {
@@ -31,11 +32,11 @@ const resumeData = {
         location: "Remote",
         period: "July 2020 - December 2021",
         accomplishments: [
-          "Exhaustive ETL design for structured and semi-structured data originating from multiple data sources (SFTP, AWS, GCP, APIs) and up to 600GB in size.",
+          "Owned the migration and successful execution of an ETL within an AWS MWAA environment as part of a longer-term evaluation of Apache Airflow",
           "Extensive debugging and testing of production ETLs and new datasets to uphold data quality standards of client deliverables.",
           "Enabled ETL migration to AWS Batch by adapting our Windows-based codebase to a container-friendly environment and delivering a 'batch and run' MVP.",
           "Entrusted with administrator duties of AWS account, managing IAM permissions for Qsight team and external clients.",
-          "Managed relationship with a new data partner through regular technical calls, project updates and data quality checks prior to production rollouts.",
+          "Managed relationships with our new data partner through regular technical calls, project updates, and data quality checks prior to production rollouts.",
         ],
       },
       {
@@ -48,7 +49,7 @@ const resumeData = {
           "Automated the processing of several thousand multi-currency invoices, saving 40+ hours of manual effort.",
           "Streamlined data loads by implementing a serverless workflow using AWS infrastructure and cross-account file transfers.",
           "Codified fragmented analytical processes using boto3, pandas, and other Python libraries.",
-          "Managed the delivery of automated reporting to C-suite through cron jobs scheduled on EC2 instance.",
+          "Managed the delivery of automated reporting to C-suite through cron jobs scheduled on our EC2 instance.",
         ],
       },
       {
@@ -119,7 +120,7 @@ const resumeData = {
           "Form Fore is a data platform that alerts users as new SEC filings are submitted and presents transactions for analysis in simple dashboards.",
         details: [
           "Actively building during mornings, nights, and weekends since May 2021.",
-          "Web scraper captures new filings and backfills submissions.",
+          "Web scraper captures new filings and backfills past submissions.",
           "Data storage and app features are enabled through a serverless architecture.",
           "AWS infrastructure and Next.js frontend deployments are managed using SST.",
         ],
@@ -134,16 +135,16 @@ const resumeData = {
         timePeriod: "November 2021 - Present",
         actions: [
           "Presentation of technical learnings to team following a project's completion.",
-          "Outspoken thought leadaership within team for improving inefficient workflows.",
-          "Overseeing the training, development, and tasks for our intern.",
+          "Thought leadaership within data engineering team on how to improve inefficient workflows.",
+          "Oversee the training, development, and success of our data engineering intern.",
         ],
       },
       {
         organization: "Circling For Semper Fi Fund",
         timePeriod: "October 2019 - October 2020",
         actions: [
-          "Initiated a year-long fundraiser for the Semper Fi Fund, a non-profit organization that provides a variety of programs to assist wounded veterans.",
-          "The fundraiser involved monthly 50k runs around the perimeter of Manhattan (and later AZ) on behalf of the Semper Fi Fund for 1 year.",
+          "Organized a fundraiser for the Semper Fi Fund, a non-profit organization that provides programs to assist wounded veterans.",
+          "The campaign involved monthly 50k runs around the perimeter of Manhattan (and later AZ) on behalf of the Semper Fi Fund.",
         ],
       },
     ],
@@ -161,7 +162,7 @@ const resumeData = {
   },
   interests: {
     title: "Interests",
-    activities: "Entrepreneurship, golf, hiking, nutrition, programming, reading, running, skiing"
+    activities: "Entrepreneurship, Hiking, Nutrition, Programming, Reading, Running, Web3"
   }
 };
 
