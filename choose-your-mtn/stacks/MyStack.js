@@ -6,7 +6,7 @@ export default class ChooseYourMountain extends sst.Stack {
   constructor(scope, id, props) {
     super(scope, id, props);
 
-    const table = new sst.Table(this, "BlogTable", {
+    const table = new sst.Table(this, "BlogTableV3", {
       fields: {
         PK: "string",
         SK: "string",
@@ -23,33 +23,41 @@ export default class ChooseYourMountain extends sst.Stack {
         NEXT_PUBLIC_REGION: scope.region,
         NEXT_PUBLIC_TABLE_NAME: table.tableName,
       },
-      // customDomain: {
-        // domainName: "chooseyourmountain.com",
-        // scope.stage === "prod"
-        //   ? "chooseyourmountain.com"
-        //   : `${scope.stage}.chooseyourmountain.com`,
-        // domainAlias: "www.chooseyourmountain.com",
-        // scope.stage === "prod" ? "www.chooseyourmountain.com" : undefined,
-        // hostedZone: "chooseyourmountain.com",
-        // hostedZone: HostedZone.fromHostedZoneAttributes(this,
-        //   "ChooseYourMtnZone",{
-        //     hostedZoneId: "Z04771733ICFQMWM917HW",
-        //     zoneName: "chooseyourmountain.com",
-        //   }
-        // )
-        // cdk: {
-        //   certificate: Certificate.fromCertificateArn(
-        //     this,
-        //     "ChooseYourMountainCert",
-        //     "arn:aws:acm:us-east-1:983976420942:certificate/adf8e676-a9c5-4e36-a315-c3d356338270",
-        //     "arn:aws:acm:us-east-1:983976420942:certificate/adf8e676-a9c5-4e36-a315-c3d356338270"
-        //   ),
-        // },
-      // },
+      customDomain: {
+        domainName: 
+          scope.stage === "prod"
+            ? "chooseyourmountain.com"
+            : `${scope.stage}.chooseyourmountain.com`,
+        domainAlias:
+          scope.stage === "prod" 
+          ? "www.chooseyourmountain.com" 
+          : undefined,
+        cdk: {
+          certificate: Certificate.fromCertificateArn(
+            this,
+            "ChooseYourMountainCert",
+            "arn:aws:acm:us-east-1:983976420942:certificate/5f48a998-959e-4f4f-9059-1758302d6635",
+          ),
+        },
+        hostedZone: 
+          HostedZone.fromHostedZoneAttributes(this,
+            "ChooseYourMtnZone",{
+              hostedZoneId: "Z04771733ICFQMWM917HW",
+              zoneName: "chooseyourmountain.com",
+            }
+          )
+          // scope.stage === "prod"
+          //   ? HostedZone.fromHostedZoneAttributes(this,
+          //       "ChooseYourMtnZone",{
+          //         hostedZoneId: "Z04771733ICFQMWM917HW",
+          //         zoneName: "chooseyourmountain.com",
+          //       }
+          //     )
+          //   : undefined
+      },
     });
 
     site.attachPermissions([table]);
-
     this.addOutputs({
       URL: site.url,
       // CustomDomainUrl: site.customDomainUrl,
